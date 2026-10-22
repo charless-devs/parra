@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #141e46, #4831a8, #7928ca);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: white;
+            width: 100%;
+            max-width: 420px;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #25254a;
+            margin-bottom: 8px;
+            font-size: 27px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 7px;
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #6741d9;
+            box-shadow: 0 0 5px rgba(103, 65, 217, 0.3);
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 25px;
+            background: linear-gradient(135deg, #5145cd, #8b35d1);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #4035b5, #7025b5);
+            transform: translateY(-2px);
+        }
+
+        .list-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #6741d9;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .list-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 25px 20px;
+            }
+
+            h2 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h2>Student Registration</h2>
+        <p class="subtitle">Enter your information below</p>
+
+        <form action="/register" method="POST">
+
+            <label for="lastname">Last Name</label>
+            <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                placeholder="Enter your last name"
+                required
+            >
+
+            <label for="firstname">First Name</label>
+            <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                placeholder="Enter your first name"
+                required
+            >
+
+            <label for="age">Age</label>
+            <input
+                type="number"
+                id="age"
+                name="age"
+                min="1"
+                placeholder="Enter your age"
+                required
+            >
+
+            <label for="adress">Address</label>
+            <input
+                type="text"
+                id="adress"
+                name="adress"
+                placeholder="Enter your address"
+                required
+            >
+
+            <button type="submit">Register Student</button>
+
+        </form>
+
+        <a href="/view" class="list-link">View Student List</a>
+
+    </div>
+
+</body>
+</html>
